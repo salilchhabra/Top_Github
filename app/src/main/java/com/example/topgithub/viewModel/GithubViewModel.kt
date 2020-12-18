@@ -3,17 +3,18 @@ package com.example.topgithub.viewModel
 import androidx.lifecycle.MutableLiveData
 import com.example.topgithub.base.BaseViewModel
 import com.example.topgithub.base.Result
+import com.example.topgithub.model.Items
 import com.example.topgithub.repository.MyRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 class GithubViewModel : BaseViewModel() {
-    private val successLiveData by lazy { MutableLiveData<Any>() }
-    private val errorLiveData by lazy { MutableLiveData<String>() }
+    val successLiveData by lazy { MutableLiveData<List<Items>>() }
+    val errorLiveData by lazy { MutableLiveData<String>() }
     private val myLauncherRepository by lazy { MyRepository() }
 
-    fun getGithubDetails(lang:String) {
+    fun getGithubDetails(lang: String) {
         viewModelScope.launch {
             when (val result =
                 withContext(Dispatchers.IO) { myLauncherRepository.getGithubRepo(lang) }) {

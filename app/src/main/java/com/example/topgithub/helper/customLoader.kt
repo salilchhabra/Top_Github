@@ -2,6 +2,8 @@ package com.example.topgithub.helper
 
 import android.app.Dialog
 import android.content.Context
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import com.example.topgithub.R
 
 class CustomProgressDialog(
@@ -10,6 +12,9 @@ class CustomProgressDialog(
 
     init {
         setContentView(R.layout.layout_loader)
+        if (null != window) {
+            window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        }
     }
 
     fun show(message: String?) {
