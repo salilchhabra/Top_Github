@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.topgithub.MainActivity
+import com.example.topgithub.view.MainActivity
 import com.example.topgithub.R
 import com.example.topgithub.databinding.ItemRepositoriesBinding
 import com.example.topgithub.model.Items

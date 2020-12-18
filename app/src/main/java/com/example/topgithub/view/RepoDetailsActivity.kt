@@ -1,4 +1,4 @@
-package com.example.topgithub
+package com.example.topgithub.view
 
 import android.os.Bundle
 import android.view.View
@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.GridLayoutManager
 import com.bumptech.glide.Glide
+import com.example.topgithub.R
 import com.example.topgithub.adapter.RepoDetailsAdapter
 import com.example.topgithub.model.Items
 import kotlinx.android.synthetic.main.activity_repo_details.*

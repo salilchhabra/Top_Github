@@ -1,4 +1,4 @@
-package com.example.topgithub
+package com.example.topgithub.view
 
 import android.content.Intent
 import android.os.Bundle
@@ -13,6 +13,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.topgithub.R
 import com.example.topgithub.adapter.MainActivityAdapter
 import com.example.topgithub.helper.CustomProgressDialog
 import com.example.topgithub.model.Items
