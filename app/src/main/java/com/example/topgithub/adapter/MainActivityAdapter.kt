@@ -3,6 +3,8 @@ package com.example.topgithub.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
@@ -36,6 +38,10 @@ class MainActivityAdapter(
             Glide.with(ivAvatar.context).load(item.avatars?.get(0)).into(ivAvatar)
             tvTitle.text = item.repo
             tvDesc.text = item.desc
+
+            holder.itemView.setOnClickListener {
+                listener.openRepoDetailsActivity(item, position, ivAvatar, tvTitle, tvDesc)
+            }
         }
     }
 
@@ -46,7 +52,11 @@ class MainActivityAdapter(
 
     interface ICommunicator {
         fun openRepoDetailsActivity(
-
+            item: Items,
+            position: Int,
+            ivAvatar: ImageView,
+            tvTitle: TextView,
+            tvDesc: TextView
         )
     }
 

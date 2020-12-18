@@ -12,6 +12,7 @@
         android:id="@+id/iv_avatar"
         android:layout_width="70dp"
         android:layout_height="70dp"
+        android:transitionName="imageTN"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -21,23 +22,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:textStyle="bold"
+        android:transitionName="titleTN"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0"
         app:layout_constraintStart_toEndOf="@+id/iv_avatar"
         app:layout_constraintTop_toTopOf="@+id/iv_avatar"
         tools:text="TITLE" />
-
-    <TextView
-        android:id="@+id/tv_desc"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0"
-        app:layout_constraintStart_toEndOf="@+id/iv_avatar"
-        app:layout_constraintTop_toBottomOf="@+id/tv_title"
-        tools:text="Description" />
 
     <TextView
         android:id="@+id/tv_link"
@@ -48,8 +38,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0"
         app:layout_constraintStart_toEndOf="@+id/iv_avatar"
-        app:layout_constraintTop_toBottomOf="@+id/tv_desc"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"
         tools:text="https://github.com/alibaba/COLA" />
+
+    <TextView
+        android:id="@+id/tv_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:transitionName="descTN"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_avatar"
+        tools:text="Description" />
 
     <TextView
         android:id="@+id/tv_lang"
@@ -58,7 +60,7 @@
         android:layout_marginTop="8dp"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_link"
+        app:layout_constraintTop_toBottomOf="@+id/tv_desc"
         tools:text="lang:Java" />
 
     <TextView
@@ -96,10 +98,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:text="@string/all_avatars"
         android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_added_stars"
-        tools:text="More Avatars:" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_added_stars" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_avatars"

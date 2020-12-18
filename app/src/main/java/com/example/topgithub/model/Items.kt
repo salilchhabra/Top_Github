@@ -1,6 +1,7 @@
 package com.example.topgithub.model
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 data class Items(
     @SerializedName("repo")
@@ -19,4 +20,4 @@ data class Items(
     var added_stars: String?,
     @SerializedName("avatars")
     var avatars: List<String>?
-)
+) : Serializable

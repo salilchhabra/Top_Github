@@ -2,4 +2,11 @@
     <string name="app_name">Top Github</string>
     <string name="search">search</string>
     <string name="hint">eg: Java, kotlin</string>
+    <string name="desc">Description : %s</string>
+    <string name="language">Language : %s</string>
+    <string name="stars">Stars : %s</string>
+    <string name="added_stars">Added Stars : %s</string>
+    <string name="forks">Forks : %s</string>
+    <string name="all_avatars">All Avatars:</string>
+
 </resources>
